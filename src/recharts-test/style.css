@@ -9,3 +9,7 @@
 .Chart {
   max-width: 1000px;
 }
+
+.LineChart {
+  box-shadow: 0 2px 12px hsl(0 0% 60% / 1);
+}
