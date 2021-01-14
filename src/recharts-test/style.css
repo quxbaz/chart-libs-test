@@ -1,0 +1,11 @@
+.Controls input[type="range"] {
+  width: 100%;
+}
+
+.WidthLabel {
+  text-align: center;
+}
+
+.Chart {
+  max-width: 1000px;
+}
