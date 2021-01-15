@@ -21,6 +21,9 @@ function generateReports (days=61) {
   return reports
 }
 
+// TODO: Generate trending reports.
+// TODO: Generate failing reports.
+
 // [
 //   { "report": { "quantity_failed": 0, "quantity_pending": 0, "quantity_sent": 0, "date":"2020-11-14" }w },
 //   { "report": { "quantity_failed": 0, "quantity_pending": 0, "quantity_sent": 0, "date":"2020-11-15" } },
