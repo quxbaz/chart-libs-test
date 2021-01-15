@@ -2,6 +2,7 @@ import css from './style.css'
 import React, { useState } from 'react'
 import { generateReports } from '../data'
 import ExampleLineChart from './ExampleLineChart'
+import ExampleBarChart from './ExampleBarChart'
 import Notes from './Notes'
 
 function DataControls ({onGenerateData}) {
@@ -35,7 +36,7 @@ function RechartsTest () {
         <h1>Charts drawn with <a href="https://recharts.org">recharts</a></h1>
         <DataControls onGenerateData={setData} />
         <ExampleLineChart data={data} margin={{top: 45, right: 40, bottom: 20, left: 0}} style={{marginTop: '20px'}}
-                          showControls={true} hasBoxShadow={true} />
+                          showLegend={true} showControls={true} hasBoxShadow={true} />
         <div className={css.Tiles3}>
           <ExampleLineChart data={data} />
           <ExampleLineChart data={data} />
@@ -80,6 +81,54 @@ function RechartsTest () {
           <ExampleLineChart data={data} />
           <ExampleLineChart data={data} />
           <ExampleLineChart data={data} />
+        </div>
+        <ExampleBarChart data={data.slice(0, 10)} margin={{top: 45, right: 40, bottom: 20, left: 0}} style={{marginTop: '20px'}}
+                         showLegend={true} hasBoxShadow={true} />
+        <div className={css.Tiles2}>
+          <ExampleBarChart data={data.slice(0, 10)} />
+          <ExampleBarChart data={data.slice(0, 10)} />
+        </div>
+        <div className={css.Tiles3}>
+          <ExampleBarChart data={data.slice(0, 10)} />
+          <ExampleBarChart data={data.slice(0, 10)} />
+          <ExampleBarChart data={data.slice(0, 10)} />
+          <ExampleBarChart data={data.slice(0, 10)} />
+          <ExampleBarChart data={data.slice(0, 10)} />
+          <ExampleBarChart data={data.slice(0, 10)} />
+        </div>
+        <div className={css.Tiles4}>
+          <ExampleBarChart data={data.slice(0, 10)} />
+          <ExampleBarChart data={data.slice(0, 10)} />
+          <ExampleBarChart data={data.slice(0, 10)} />
+          <ExampleBarChart data={data.slice(0, 10)} />
+          <ExampleBarChart data={data.slice(0, 10)} />
+          <ExampleBarChart data={data.slice(0, 10)} />
+          <ExampleBarChart data={data.slice(0, 10)} />
+          <ExampleBarChart data={data.slice(0, 10)} />
+        </div>
+        <div className={css.Tiles5}>
+          <ExampleBarChart data={data.slice(0, 10)} />
+          <ExampleBarChart data={data.slice(0, 10)} />
+          <ExampleBarChart data={data.slice(0, 10)} />
+          <ExampleBarChart data={data.slice(0, 10)} />
+          <ExampleBarChart data={data.slice(0, 10)} />
+        </div>
+        <div className={css.Tiles6}>
+          <ExampleBarChart data={data.slice(0, 10)} />
+          <ExampleBarChart data={data.slice(0, 10)} />
+          <ExampleBarChart data={data.slice(0, 10)} />
+          <ExampleBarChart data={data.slice(0, 10)} />
+          <ExampleBarChart data={data.slice(0, 10)} />
+          <ExampleBarChart data={data.slice(0, 10)} />
+        </div>
+        <div className={css.Tiles7}>
+          <ExampleBarChart data={data.slice(0, 10)} />
+          <ExampleBarChart data={data.slice(0, 10)} />
+          <ExampleBarChart data={data.slice(0, 10)} />
+          <ExampleBarChart data={data.slice(0, 10)} />
+          <ExampleBarChart data={data.slice(0, 10)} />
+          <ExampleBarChart data={data.slice(0, 10)} />
+          <ExampleBarChart data={data.slice(0, 10)} />
         </div>
       </div>
       <Notes className={css.RightColumn} />
