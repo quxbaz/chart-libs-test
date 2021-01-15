@@ -78,6 +78,7 @@
 .RightColumn {
   grid-column: 2 / 3;
   padding: 0 60px;
+  overflow-y: auto;
 }
 
 .ExampleLineChart {}
@@ -86,4 +87,22 @@
   position: sticky;
   top: 0;
   height: 100vh;
+}
+
+.Rating span {
+  display: inline-block;
+  width: 110px;
+  font-weight: bold;
+}
+
+.RatingMark {
+  display: inline-block;
+  margin-left: 4px;
+  width: 30px;
+  height: 10px;
+  border: 1px solid #000;
+}
+
+.GoodRatingMark {
+  background: hsl(120 100% 50% / 1);
 }

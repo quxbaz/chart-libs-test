@@ -2,6 +2,14 @@ import css from './style.css'
 import React from 'react'
 import classNames from 'classnames'
 
+const GoodRatingMark = () => (
+  <div className={`${css.RatingMark} ${css.GoodRatingMark}`} />
+)
+
+const BadRatingMark = () => (
+  <div className={`${css.RatingMark} ${css.BadRatingMark}`} />
+)
+
 const Notes = ({className}) => (
   <div className={classNames(css.Notes, className)}>
     <h2>Notes</h2>
@@ -48,6 +56,29 @@ const Notes = ({className}) => (
         <a href='https://github.com/recharts/recharts/issues/1761'>
           https://github.com/recharts/recharts/issues/1761
         </a>
+      </li>
+      <br />
+      <li>
+        <div className={css.Rating}>
+          <span>Ease of use:</span>
+          <GoodRatingMark /><GoodRatingMark /><GoodRatingMark /><GoodRatingMark /><GoodRatingMark />
+        </div>
+        <div className={css.Rating}>
+          <span>Flexibility:</span>
+          <GoodRatingMark /><GoodRatingMark /><GoodRatingMark /><GoodRatingMark /><GoodRatingMark />
+        </div>
+        <div className={css.Rating}>
+          <span>Interactivity:</span>
+          <GoodRatingMark /><GoodRatingMark /><GoodRatingMark /><GoodRatingMark /><BadRatingMark />
+        </div>
+        <div className={css.Rating}>
+          <span>Performance:</span>
+          <GoodRatingMark /><GoodRatingMark /><GoodRatingMark /><BadRatingMark /><BadRatingMark />
+        </div>
+        <div className={css.Rating}>
+          <span>Size:</span>
+          <GoodRatingMark /><GoodRatingMark /><BadRatingMark /><BadRatingMark /><BadRatingMark />
+        </div>
       </li>
     </ul>
   </div>
