@@ -16,14 +16,14 @@ const Notes = ({className}) => (
     <ul>
       <li>Dynamic resizing is supported.</li>
       <li>
-        recharts is quite a large package and draws in a large number of dependencies.
+        Recharts is quite a large package and draws in a large number of dependencies.
       </li>
       <br />
       <li>
         <a href="./bundle-size.png" style={{float: 'right', marginLeft: 10}}>
           <img src="./bundle-size.png" width={120} height={120} />
         </a>
-        Total bundle size with <b>recharts</b>, <b>react</b>, and <b>react-dom</b> is <b>512K</b> uncompressed and <b>148K</b> compressed.
+        Total bundle size with <b>Recharts</b>, <b>react</b>, and <b>react-dom</b> is <b>512K</b> uncompressed and <b>148K</b> compressed.
       </li>
       <div style={{clear: 'both'}} />
       <li>
