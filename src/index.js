@@ -1,7 +1,10 @@
+import React from 'react'
+import { render } from 'react-dom'
 import './style.css'
-import rechartsTest from 'recharts-test'
+import { RechartsTest } from 'recharts-test'
 
 console.log('chart-libs-test.js')
 console.log('--------------------------------')
 
-rechartsTest()
+const Main = document.getElementById('Main')
+render(<RechartsTest />, Main)

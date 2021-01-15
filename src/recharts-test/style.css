@@ -1,3 +1,7 @@
+.box-shadow {
+  box-shadow: 0 2px 12px hsl(0 0% 60% / 1);
+}
+
 .Controls input[type="range"] {
   width: 100%;
 }
@@ -6,10 +10,73 @@
   text-align: center;
 }
 
-.Chart {
-  max-width: 1000px;
+.RechartsTest {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
 }
 
-.LineChart {
-  box-shadow: 0 2px 12px hsl(0 0% 60% / 1);
+.Tiles3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 40px;
+}
+
+.Tiles4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 40px;
+}
+
+.Tiles5 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin-top: 40px;
+}
+
+.Tiles6 {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  margin-top: 40px;
+}
+
+.Tiles7 {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-top: 40px;
+}
+
+.Tiles8 {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  margin-top: 40px;
+}
+
+.DataControls {
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  margin-bottom: 12px;
+  padding: 20px;
+  background: hsl(50 100% 50% / 0.9);
+}
+
+.DataControls button + button {
+  margin-left: 8px;
+}
+
+.LeftColumn {
+  grid-column: 1 / 2;
+}
+
+.RightColumn {
+  grid-column: 2 / 3;
+  padding: 0 60px;
+}
+
+.ExampleLineChart {}
+
+.Notes {
+  position: sticky;
+  top: 0;
+  height: 100vh;
 }
