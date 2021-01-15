@@ -36,7 +36,7 @@ function RechartsTest () {
         <h1>Charts drawn with <a href="https://recharts.org">recharts</a></h1>
         <DataControls onGenerateData={setData} />
         <ExampleLineChart data={data} margin={{top: 45, right: 40, bottom: 20, left: 0}} style={{marginTop: '20px'}}
-                          showLegend={true} showControls={true} hasBoxShadow={true} />
+                          showLegend showControls hasBoxShadow />
         <div className={css.Tiles3}>
           <ExampleLineChart data={data} />
           <ExampleLineChart data={data} />
@@ -82,8 +82,8 @@ function RechartsTest () {
           <ExampleLineChart data={data} />
           <ExampleLineChart data={data} />
         </div>
-        <ExampleBarChart data={data.slice(0, 10)} margin={{top: 45, right: 40, bottom: 20, left: 0}} style={{marginTop: '20px'}}
-                         showLegend={true} hasBoxShadow={true} />
+        <ExampleBarChart data={data} margin={{top: 45, right: 40, bottom: 20, left: 0}} style={{marginTop: '20px'}}
+                         showLegend showControls showBrush hasBoxShadow />
         <div className={css.Tiles2}>
           <ExampleBarChart data={data.slice(0, 10)} />
           <ExampleBarChart data={data.slice(0, 10)} />

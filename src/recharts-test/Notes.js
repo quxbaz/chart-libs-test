@@ -51,32 +51,37 @@ const Notes = ({className}) => (
         are better at showing a trend. I think we expect the numbers to remain
         fairly constant, especially for the time interval (61 days). Bar graphs
         also indicate abnormal spikes really well. Bar charts take more
-        horizontal space though. I think recharts has support for horizontal
-        scroll with the "Brush" component, but maybe not.<br />
-        <a href='https://github.com/recharts/recharts/issues/1761'>
-          https://github.com/recharts/recharts/issues/1761
-        </a>
+        horizontal space though. Recharts has support for horizontal
+        scroll with the "Brush" component.
       </li>
       <br />
       <li>
         <div className={css.Rating}>
-          <span>Ease of use:</span>
+          <span>Ease of use</span>
           <GoodRatingMark /><GoodRatingMark /><GoodRatingMark /><GoodRatingMark /><GoodRatingMark />
         </div>
         <div className={css.Rating}>
-          <span>Flexibility:</span>
+          <span>Flexibility</span>
           <GoodRatingMark /><GoodRatingMark /><GoodRatingMark /><GoodRatingMark /><GoodRatingMark />
         </div>
         <div className={css.Rating}>
-          <span>Interactivity:</span>
+          <span>Documentation</span>
+          <GoodRatingMark /><GoodRatingMark /><GoodRatingMark /><GoodRatingMark /><GoodRatingMark />
+        </div>
+        <div className={css.Rating}>
+          <span>Interactivity</span>
           <GoodRatingMark /><GoodRatingMark /><GoodRatingMark /><GoodRatingMark /><BadRatingMark />
         </div>
         <div className={css.Rating}>
-          <span>Performance:</span>
+          <span>Appearance</span>
           <GoodRatingMark /><GoodRatingMark /><GoodRatingMark /><BadRatingMark /><BadRatingMark />
         </div>
         <div className={css.Rating}>
-          <span>Size:</span>
+          <span>Performance</span>
+          <GoodRatingMark /><GoodRatingMark /><GoodRatingMark /><BadRatingMark /><BadRatingMark />
+        </div>
+        <div className={css.Rating}>
+          <span>Size</span>
           <GoodRatingMark /><GoodRatingMark /><BadRatingMark /><BadRatingMark /><BadRatingMark />
         </div>
       </li>

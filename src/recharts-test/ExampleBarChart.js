@@ -4,13 +4,13 @@ import classNames from 'classnames'
 import {
   ResponsiveContainer, BarChart, Bar,
   CartesianGrid, XAxis, YAxis,
-  Legend, Tooltip,
+  Legend, Tooltip, Brush,
 } from 'recharts'
 import ChartControls from './ChartControls'
 
 const formatTick = date => date.split('-').slice(1).join('/')
 
-function ExampleBarChart ({className, style, data, margin, showLegend, showControls, hasBoxShadow}) {
+function ExampleBarChart ({className, style, data, margin, showLegend, showControls, showBrush, hasBoxShadow}) {
   const [width, setWidth] = useState(100)
   return (
     <div className={classNames(css.ExampleBarChart, className)} style={style}>
@@ -32,6 +32,10 @@ function ExampleBarChart ({className, style, data, margin, showLegend, showContr
               <Legend verticalAlign='top' height={36} iconType='rect' />
             )}
             <Tooltip isAnimationActive={false} cursor={{fill: 'hsl(44 81% 62% / 0.3)'}} />
+            {showBrush && (
+              <Brush data={data} dataKey='date' tickFormatter={formatTick}
+                     startIndex={41} />
+            )}
           </BarChart>
         </ResponsiveContainer>
       </div>
@@ -44,6 +48,7 @@ ExampleBarChart.defaultProps = {
   style: {},
   showLegend: false,
   showControls: false,
+  showBrush: false,
   hasBoxShadow: false,
 }
 
