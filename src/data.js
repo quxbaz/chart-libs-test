@@ -1,7 +1,7 @@
-const report = (date) => {
-  const quantity_sent = Math.round(Math.random() * 20)
-  const quantity_pending = Math.round(Math.random() * 10)
-  const quantity_failed = Math.round(quantity_sent * Math.random() * 0.25)
+const report = (date, high=20, low=0, pendingPercent=0.4, failingPercent=0.2) => {
+  const quantity_sent = Math.round(Math.random() * (high - low) + low)
+  const quantity_pending = Math.round(quantity_sent * Math.random() * pendingPercent)
+  const quantity_failed = Math.round(quantity_sent * Math.random() * failingPercent)
   return {
     quantity_sent,
     quantity_pending,
@@ -11,11 +11,41 @@ const report = (date) => {
   }
 }
 
-function generateReports (days=61) {
+function generateNormalReports (days=61) {
   const reports = []
   const date = new Date()
   for (let i=0; i < days; i++) {
     reports.push(report(date))
+    date.setDate(date.getDate() + 1)
+  }
+  return reports
+}
+
+function generateTrendingUpReports (days=61) {
+  const reports = []
+  const date = new Date()
+  for (let i=0; i < days; i++) {
+    reports.push(report(date, 20 + (Math.random() * i * 4) + i * 2))
+    date.setDate(date.getDate() + 1)
+  }
+  return reports
+}
+
+function generateTrendingDownReports (days=61) {
+  const reports = []
+  const date = new Date()
+  for (let i=0; i < days; i++) {
+    reports.push(report(date, Math.max(0, 100 - (Math.random() * i * 3) - i)))
+    date.setDate(date.getDate() + 1)
+  }
+  return reports
+}
+
+function generateFailingReports (days=61) {
+  const reports = []
+  const date = new Date()
+  for (let i=0; i < days; i++) {
+    reports.push(report(date, 20, 0, 0.4, 0.9))
     date.setDate(date.getDate() + 1)
   }
   return reports
@@ -90,5 +120,8 @@ function generateReports (days=61) {
 // ]
 
 export {
-  generateReports,
+  generateNormalReports,
+  generateTrendingUpReports,
+  generateTrendingDownReports,
+  generateFailingReports,
 }

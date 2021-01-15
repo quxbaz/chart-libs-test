@@ -1,22 +1,24 @@
 import css from './style.css'
 import React, { useState } from 'react'
-import { generateReports } from '../data'
+import {
+  generateNormalReports, generateTrendingUpReports, generateTrendingDownReports, generateFailingReports,
+} from '../data'
 import ExampleLineChart from './ExampleLineChart'
 import ExampleBarChart from './ExampleBarChart'
 import Notes from './Notes'
 
 function DataControls ({onGenerateData}) {
   const generateNormalData = () => {
-    onGenerateData(generateReports())
+    onGenerateData(generateNormalReports())
   }
   const generateTrendingUpData = () => {
-    onGenerateData(generateReports())
+    onGenerateData(generateTrendingUpReports())
   }
   const generateTrendingDownData = () => {
-    onGenerateData(generateReports())
+    onGenerateData(generateTrendingDownReports())
   }
   const generateFailingData = () => {
-    onGenerateData(generateReports())
+    onGenerateData(generateFailingReports())
   }
   return (
     <div className={css.DataControls}>
@@ -29,7 +31,7 @@ function DataControls ({onGenerateData}) {
 }
 
 function RechartsTest () {
-  const [data, setData] = useState(generateReports())
+  const [data, setData] = useState(generateNormalReports())
   return (
     <div className={css.RechartsTest}>
       <div className={css.LeftColumn}>
