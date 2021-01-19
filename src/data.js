@@ -13,40 +13,40 @@ const report = (date, high=20, low=0, pendingPercent=0.4, failingPercent=0.2) =>
 
 function generateNormalReports (days=61) {
   const reports = []
-  const date = new Date()
   for (let i=0; i < days; i++) {
+    const date = new Date()
+    date.setDate(date.getDate() + i)
     reports.push(report(date))
-    date.setDate(date.getDate() + 1)
   }
   return reports
 }
 
 function generateTrendingUpReports (days=61) {
   const reports = []
-  const date = new Date()
   for (let i=0; i < days; i++) {
+    const date = new Date()
+    date.setDate(date.getDate() + i)
     reports.push(report(date, 20 + (Math.random() * i * 4) + i * 2))
-    date.setDate(date.getDate() + 1)
   }
   return reports
 }
 
 function generateTrendingDownReports (days=61) {
   const reports = []
-  const date = new Date()
   for (let i=0; i < days; i++) {
+    const date = new Date()
+    date.setDate(date.getDate() + i)
     reports.push(report(date, Math.max(0, 100 - (Math.random() * i * 3) - i)))
-    date.setDate(date.getDate() + 1)
   }
   return reports
 }
 
 function generateFailingReports (days=61) {
   const reports = []
-  const date = new Date()
   for (let i=0; i < days; i++) {
+    const date = new Date()
+    date.setDate(date.getDate() + i)
     reports.push(report(date, 20, 0, 0.4, 0.9))
-    date.setDate(date.getDate() + 1)
   }
   return reports
 }
