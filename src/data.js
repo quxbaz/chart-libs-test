@@ -55,7 +55,7 @@ function generateFailingReports (days=61) {
 // TODO: Generate failing reports.
 
 // [
-//   { "report": { "quantity_failed": 0, "quantity_pending": 0, "quantity_sent": 0, "date":"2020-11-14" }w },
+//   { "report": { "quantity_failed": 0, "quantity_pending": 0, "quantity_sent": 0, "date":"2020-11-14" } },
 //   { "report": { "quantity_failed": 0, "quantity_pending": 0, "quantity_sent": 0, "date":"2020-11-15" } },
 //   { "report": { "quantity_failed": 0, "quantity_pending": 0, "quantity_sent": 0, "date":"2020-11-16" } },
 //   { "report": { "quantity_failed": 0, "quantity_pending": 0, "quantity_sent": 0, "date":"2020-11-17" } },
